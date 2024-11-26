@@ -29,6 +29,9 @@ function operate(left, right, ope) {
     } else if (ope == '*') {
         return multiply(left, right)
     } else {
+        if (!divide(left, right)) {
+            return 0
+        }
         return divide(left, right)
     }
 }
